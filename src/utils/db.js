@@ -1,8 +1,11 @@
 const mongoose = require("mongoose");
 
+MONGOURI =
+  "mongodb+srv://chiragmathur27:nwUeTnoZS7H85kio@twitter-cluster.nhhmswo.mongodb.net/?retryWrites=true&w=majority";
+
 const connectToDb = async () => {
   try {
-    const connection = await mongoose.connect(process.env.MONGOURI, {
+    const connection = await mongoose.connect(MONGOURI, {
       useCreateIndex: true,
       useNewUrlParser: true,
       useUnifiedTopology: true,
